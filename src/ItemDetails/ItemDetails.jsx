@@ -26,9 +26,8 @@ const ItemDetails = () => {
       <p>Author:{book.author}</p>
       <p>Genre:{book.genre}</p>
       <p>Book Rating:{book.bookRating}</p>
-      <p>Has Read?:{book.hasRead}</p>
-      <p>Book Img:{book.imageURL}</p>
-      <p></p>
+      <p>Has Read: {book.hasRead ? "Yes" : "No"}</p>
+      <img src={book.imageURL} alt={book.title} />
     </div>
   );
 };
