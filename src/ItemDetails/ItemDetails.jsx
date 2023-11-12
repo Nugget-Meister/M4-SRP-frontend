@@ -2,14 +2,14 @@ import React, { useState, useEffect } from "react";
 import { useParams } from "react-router";
 import { getEnv } from "../../Helpers/getEnv";
 
-const apiUrl = getEnv();
-
 const ItemDetails = () => {
   const { id } = useParams();
   const [book, setBook] = useState(null);
 
+  const apiUrl = getEnv();
+
   useEffect(() => {
-    fetch(`${apiUrl}/books${id}`)
+    fetch(`${apiUrl}/books/${id}`)
       .then((response) => response.json())
       .then((data) => setBook(data))
       .catch((error) => console.log(error));
