@@ -12,7 +12,7 @@ const NavBar = () => {
                     <Nav.Link href="/" className='px-4'>
                         Home
                     </Nav.Link>
-                    <Nav.Link href="/new" classname='px-4'>
+                    <Nav.Link href="/new" className='px-4'>
                         New Entry
                     </Nav.Link>
                 </Container>
