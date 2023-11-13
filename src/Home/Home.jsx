@@ -1,10 +1,23 @@
 import React, { useEffect } from 'react';
-import { getAllItems, getItem } from '../common/helpers/apicalls';
+import { getAllItems, getItem, updateItem} from '../common/helpers/apicalls';
 import { Button } from 'react-bootstrap';
 const Home = () => {
 
 const test = () => {
-    getItem(1)
+    
+    const data = {
+        "title": "The Greater Gatsby",
+        "ISBN": "9780743273565",
+        "author": "F.Scott Fitzgerald",
+        "genre": "Classic",
+        "bookRating": 4.30,
+        "hasRead": true,
+        "imageURL": "https://m.media-amazon.com/images/I/61Hc2hsbeHL._SY522_.jpg"
+    }
+    
+    // console.log(data)
+    updateItem(1, data)
+    // getItem(1)
     .then(res => console.log(res))
 }
 
