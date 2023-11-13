@@ -10,11 +10,35 @@ const getAllItems = () => {
     .catch(err => console.error(err))
 }
 const getItem = (id) => {
+    return fetch(`${URL}/${id}`)
+    .then(res => res.json())
+    // .then(json => json.data.payload)
+    .catch(err => console.error(err))
+}
+const addItem = (item) => {
+    const options = {
+        method: "POST",
+        body: JSON.stringify(data),
+        headers: {"Content-Type": "application/json"}
+    }
+    return fetch(URL, options)
+    .then(res => res.json())
+    .catch(err => console.error(err))
+}
+
+const updateItem = (id, item) => {
+    const options = {
+        method: "PUT",
+        body: JSON.stringify(data),
+        headers: {"Content-Type": "application/json"}
+    }
+}
+const deleteItem = (id) => {
+    const options = {
+        method: "delete",
+    }
 
 }
-const addItem = (item) => {}
-const updateItem = (id, item) => {}
-const deleteItem = (id) => {}
 
 export  {
     getAllItems,

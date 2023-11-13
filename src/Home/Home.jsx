@@ -1,15 +1,17 @@
 import React, { useEffect } from 'react';
-import { getAllItems } from '../common/helpers/apicalls';
-
+import { getAllItems, getItem } from '../common/helpers/apicalls';
+import { Button } from 'react-bootstrap';
 const Home = () => {
 
-    useEffect(() => {
-        getAllItems()
-        .then(res => console.log(res))
-    }, [])
+const test = () => {
+    getItem(1)
+    .then(res => console.log(res))
+}
+
     return (
         <div>
-            Home Page
+            Home Page <br />
+            <Button variant='secondary' onClick={() => test()}>Button Tester</Button>
         </div>
     );
 }
