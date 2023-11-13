@@ -35,14 +35,21 @@ const updateItem = (id, data) => {
     }
 
     return fetch(`${URL}/${id}`, options)
-    .then(res => res.json())
-    .catch(err => console.error(err))
+    // .then(res => res.json())
+    // .catch(err => console.error(err))
 }
 const deleteItem = (id) => {
     const options = {
         method: "delete",
     }
 
+    return fetch(`${URL}/${id}`, options)
+    .then(res => res.json())
+    .then(json => {
+        // Success check
+        return json.payload.data.id ? true : false
+    })
+    .catch(err => console.error(err))
 }
 
 export  {
