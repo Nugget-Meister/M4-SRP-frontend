@@ -38,7 +38,16 @@ const ItemForm = () => {
         e.preventDefault()
         // console.log(book)
         addItem(book)
-        .then(res => console.log(res))
+        .then(res => {
+            if (res.id) {
+                alert(`Successfully added book with id ${res.id}`)
+                navigate("/")
+            } else {
+                alert(`An error has occurred, please try again later. If the issue persists, please contact the repo maintainer.`)
+                throw new Error('An error has occured. Please try again')
+            }
+        })
+        .catch(err => console.error(err))
         
     }
     
