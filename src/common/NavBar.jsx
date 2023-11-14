@@ -6,29 +6,35 @@ import Nav from 'react-bootstrap/Nav';
 import { Image } from 'react-bootstrap';
 
 import logoImg from "../assets/logoB.png" 
+import "./styles/NavBar.css"
 
 const NavBar = () => {
-    const imageURL = "/"
     return (
-        <div className='NavBar'>
-            <Navbar expand="lg" className='bg-body-tertiary'>
+        <div className=''>
+            <Navbar 
+                expand="lg" 
+                className='navbar-bg-brown py-1'>
                 <Container>
                     {/* <Nav.Link href="/" className='px-4'>
                         Home
                     </Nav.Link> */}
-                    <Nav.Link href="/new" className='px-4'>
+                    <Nav.Link 
+                        href="/new" 
+                        className='px-4 text-white'>
                         Donate a Book
                     </Nav.Link>
                 </Container>
                 <Container className='justify-content-center'>
                     <Navbar.Brand> 
-                        <Nav.Link href="/" className='px-4'>
+                        <Nav.Link 
+                            href="/" 
+                            className='px-4 text-white d-flex align-items-center navbar-font'>
                             <Image 
                                 className='px-2'
                                 style={{height: "50px"}}
                                 src={logoImg}/>
-                            <span>Shelf</span>
-                            <span> Space</span>
+                            <span className='navbar-orange fs-3 px-2'>Shelf</span>
+                            <span className='text-white fs-3'> Space</span>
                         </Nav.Link>
                     </Navbar.Brand>
                 </Container>

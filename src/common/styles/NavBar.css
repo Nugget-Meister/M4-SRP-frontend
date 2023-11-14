@@ -1,3 +1,9 @@
+/* Google Fonts Import */
+
+@import url('https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@300&display=swap');
+
+/* Custom Colors */
+
 :root{
     --shelf-orange: #ffaf37;
     --navbar-brown: #5b4242;
@@ -6,10 +12,23 @@
     --form-bg-brown: #CAB7A2;
 }
 
-navbar-orange {
+.navbar-orange {
     color: var(--shelf-orange)
 }
 
-navbar-bg {
-    color: var(--navbar-brown)
+
+.text-white {
+    color: white;
+    background-color: none;
 }
+
+.navbar-bg-brown {
+    background-color: var(--navbar-brown)
+}
+
+.navbar-font {
+    font-family: 'Inknut Antiqua', serif;
+}
+
+/* Text Sizes */
+
