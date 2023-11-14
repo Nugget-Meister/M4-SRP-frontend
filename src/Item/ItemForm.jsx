@@ -43,7 +43,7 @@ const ItemForm = ({data}) => {
     const handleSubmit = (e) => {
         e.preventDefault()
 
-        if(data) {
+        if(!data) {
             addItem(book)
             .then(res => {
                 if (res.id) {
@@ -58,12 +58,13 @@ const ItemForm = ({data}) => {
         } else {
             updateItem(data.id, book)
             .then(res => {
-                if (res.id) {
-                    alert(`Successfully edited book with id ${res.id}`)
-                    navigate(`/${res.id}`)
+                if (res.status == 200) {
+                    alert(`Successfully edited book with id ${data.id}`)
+                    navigate(`/${data.id}`)
                 } else {
+                    console.log(res)
                     alert(`An error has occurred, please try again later. If the issue persists, please contact the repo maintainer.`)
-                    throw new Error('An error has occured. Please try again')
+                    throw new Error(`An error has occured. Please try again `)
                 }
             })
             .catch(err => console.error(err))
