@@ -30,5 +30,14 @@
     font-family: 'Inknut Antiqua', serif;
 }
 
-/* Text Sizes */
+/* Buttons */
+
+.button-login {
+    background-color: var(--login-brown);
+    border-style: none;
+}
+
+.button-login:hover {
+    background-color: var(--shelf-orange);
+}
 
