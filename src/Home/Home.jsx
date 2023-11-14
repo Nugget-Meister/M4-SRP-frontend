@@ -1,33 +1,25 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { addItem, deleteItem, getAllItems, getItem, updateItem} from '../common/helpers/apicalls';
 import { Button } from 'react-bootstrap';
+import RouteDebugger from '../common/helpers/components/RouteDebugger';
+import ViewList from './Views/ViewLIst';
+import ViewTiles from './Views/ViewTiles';
 const Home = () => {
+    const debug = false
+    const [viewMode, setViewMode] = useState("list")
+    const [books, updateBooks] = useState([])
 
-const test = () => {
-    
-    const data = {
-        "title": "The BingusBongus",
-        "ISBN": "2780743273565",
-        "author": "21 Savage",
-        "genre": "New Blood",
-        "bookRating": 4.68,
-        "hasRead": false,
-        "imageURL": "https://m.media-amazon.com/images/I/61Hc2hsbeHL._SY522_.jpg"
-    }
-    
-    // console.log(data)
-    // updateItem(1, data)
-    // getAllItems()
-    // getItem(1)
-    // addItem(data)
-    // deleteItem(27)
-    .then(res => console.log(res))
-}
+    useEffect(() => {
+        getAllItems()
+        .then(res => updateBooks(res))
+        .then(json => console.log(books))
+    }, [])
 
     return (
         <div>
-            Home Page <br />
-            <Button variant='secondary' onClick={() => test()}>Button Tester</Button>
+            {/* Home Page <br /> */}
+            {debug ? <RouteDebugger/> : null}
+            {viewMode == "list" ? <ViewList entries={books}/> : null}
         </div>
     );
 }
