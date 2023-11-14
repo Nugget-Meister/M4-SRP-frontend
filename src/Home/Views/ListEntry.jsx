@@ -15,10 +15,10 @@ const navigate = useNavigate()
             onClick={() => navigate(`/${entry.id}`)}
             >
             <td width="10rem" className=''>
-                     {/* <Card variant="top" className="p-0" 
+                     <Card variant="top" className="p-0" 
                      style={{width: "10rem", height:"5rem",overflow: "hidden"}}>
                         <Card.Img src={entry.imageurl}/>
-                     </Card> */}
+                     </Card>
             </td>
             <td>{entry.title}</td>
             <td className=''>{entry.hasread ? "Read" : null}</td>
