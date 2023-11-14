@@ -3,7 +3,7 @@ import React from 'react';
 import Navbar from 'react-bootstrap/Navbar';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
-import { Image } from 'react-bootstrap';
+import { Image, Button } from 'react-bootstrap';
 
 import logoImg from "../assets/logoB.png" 
 import "./styles/NavBar.css"
@@ -40,7 +40,10 @@ const NavBar = () => {
                 </Container>
                 <Container className='justify-content-end'>
                     <Nav.Link href='/login' className='mx-4'>
-                        Log-in / Sign Up
+                        <Button
+                            variant='primary'
+                            className='rounded-pill button-login py-3 px-4 shadow-sm'
+                        >Log-in / Sign Up</Button>
                     </Nav.Link>
                 </Container>
             </Navbar>
