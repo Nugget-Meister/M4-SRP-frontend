@@ -1,9 +1,11 @@
 import React from 'react';
+import ItemForm from './ItemForm';
 
 const NewItem = () => {
     return (
         <div>
-            NewItem
+            <h1>Create New Book</h1>
+            <ItemForm/>
         </div>
     );
 }
