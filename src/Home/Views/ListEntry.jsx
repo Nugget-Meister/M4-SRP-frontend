@@ -25,7 +25,7 @@ const ListEntry = ({ entry }) => {
                 <div className='d-flex flex-fill px-5 fs-5'>
                         <span className='font-inter'>{entry.title}</span>
                 </div>
-                <div className="fs-6 px-4 font-inter italic">
+                <div className="fs-5 px-4 font-inter italic">
                     {entry.hasread ? 'Read' : null}
                 </div>
             </Container>

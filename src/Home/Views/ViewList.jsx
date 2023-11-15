@@ -9,7 +9,7 @@ const ViewList = ({ entries, onItemClick }) => {
     return (
         <div className='ViewList m-3'>
             <div>
-                <h1 className='font-imfellfc'>Current Shelf</h1>
+                <h1 className='font-imfellfc font-size-36 d-flex px-3 py-3'>Current Shelf</h1>
             </div>
             <Container
                 className=''

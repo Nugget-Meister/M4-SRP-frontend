@@ -89,6 +89,12 @@ main {
     font-style: italic;
 }
 
+/* Font Sizes */
+
+.font-size-36 {
+    font-size: 36pt;
+}
+
 /* Component Customs */
 .ListEntry {
     margin-top: 7px;
