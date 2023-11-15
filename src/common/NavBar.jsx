@@ -13,7 +13,7 @@ const NavBar = () => {
         <div className=''>
             <Navbar 
                 expand="lg" 
-                className='navbar-bg-brown py-1'>
+                className='NavBar navbar-bg-brown py-2'>
                 <Container>
                     {/* <Nav.Link href="/" className='px-4'>
                         Home

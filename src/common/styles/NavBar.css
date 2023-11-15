@@ -1,6 +1,8 @@
 /* Google Fonts Import */
 
 @import url('https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inknut+Antiqua&family=Inter:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IM+Fell+French+Canon:ital@1&display=swap');
 
 /* Custom Colors */
 
@@ -10,7 +12,21 @@
     --login-brown: #C4B1AE;
     --submit-olive: #AEA893;
     --form-bg-brown: #CAB7A2;
+    --background-gray: #d9d9d9;
+    --table-gray: #b9b9b9;
 }
+ 
+body {
+    background-color: var(--background-gray);
+}
+
+main {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: center;
+  }
+
 
 .navbar-orange {
     color: var(--shelf-orange)
@@ -22,12 +38,15 @@
     background-color: none;
 }
 
+
+/* Backgrounds */
+
 .navbar-bg-brown {
     background-color: var(--navbar-brown)
 }
 
-.navbar-font {
-    font-family: 'Inknut Antiqua', serif;
+.bg-table-gray {
+    background-color: var(--table-gray);
 }
 
 /* Buttons */
@@ -41,3 +60,49 @@
     background-color: var(--shelf-orange);
 }
 
+.widget-entry {
+    background-color: white;
+    width: 70%;
+    height: 50vh;
+    max-height: 500px;
+    min-height: 400px;
+    box-shadow: 30px 30px var(--form-bg-brown);
+}
+
+
+/* Font Application */
+
+.navbar-font {
+    font-family: 'Inknut Antiqua', serif;
+}
+
+.font-inter {
+    font-family: 'Inter', sans-serif;
+}
+
+.font-imfellfc {
+    font-family: 'IM Fell French Canon', serif;
+}
+
+/* Font Styling */
+.italic {
+    font-style: italic;
+}
+
+/* Font Sizes */
+
+.font-size-36 {
+    font-size: 36pt;
+}
+
+/* Component Customs */
+.ListEntry {
+    margin-top: 7px;
+    margin-bottom: 7px;
+}
+.ListEntry:hover {
+    transition: 250ms;
+    opacity: 0.8;
+    background-color: var(--background-gray);
+    margin-bottom: 15px;
+}
