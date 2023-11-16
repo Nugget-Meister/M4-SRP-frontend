@@ -10,21 +10,18 @@ import "./styles/NavBar.css"
 
 const NavBar = () => {
     return (
-        <div className=''>
+        <div className='NavBar'>
             <Navbar 
                 expand="lg" 
-                className='NavBar navbar-bg-brown py-2'>
-                <Container>
-                    {/* <Nav.Link href="/" className='px-4'>
-                        Home
-                    </Nav.Link> */}
+                className='navbar-bg-brown py-2 navbar-mobile'>
+                <Container id="donate-button">
                     <Nav.Link 
                         href="/new" 
                         className='px-4 text-white'>
                         Donate a Book
                     </Nav.Link>
                 </Container>
-                <Container className='justify-content-center'>
+                <Container id='navbar-logo' className='justify-content-center'>
                     <Navbar.Brand> 
                         <Nav.Link 
                             href="/" 
@@ -33,8 +30,8 @@ const NavBar = () => {
                                 className='px-2'
                                 style={{height: "50px"}}
                                 src={logoImg}/>
-                            <span className='navbar-orange fs-3 px-2'>Shelf</span>
-                            <span className='text-white fs-3'> Space</span>
+                            <span className='navbar-text navbar-orange fs-3 px-2'>Shelf</span>
+                            <span className='navbar-text text-white fs-3'> Space</span>
                         </Nav.Link>
                     </Navbar.Brand>
                 </Container>
@@ -43,7 +40,7 @@ const NavBar = () => {
                         <Button
                             variant='primary'
                             className='rounded-pill button-login py-3 px-4 shadow-sm'
-                        >Log-in / Sign Up</Button>
+                        >Log-in</Button>
                     </Nav.Link>
                 </Container>
             </Navbar>

@@ -14,8 +14,10 @@ const EditItem = () => {
 
     // console.log(data)
     return (
-        <div>
-            <h1>Edit Item {id}</h1>
+        <div className='EditItem'>
+            <h1
+                className='font-imfellfc'
+                >Edit - "{data.title}"</h1>
             <ItemForm data={data}/>
         </div>
     );

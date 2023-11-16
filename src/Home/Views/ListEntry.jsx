@@ -7,6 +7,7 @@ import { Container } from 'react-bootstrap';
 const ListEntry = ({ entry }) => {
     const navigate = useNavigate();
 
+
     return (
         <>
             <Container
@@ -14,19 +15,20 @@ const ListEntry = ({ entry }) => {
                 style={{ cursor: 'pointer' }} 
                 onClick={() => navigate(`/${entry.id}`)}
             >
-                <div width="10rem" className="">
+                <div className="">
                     <Card 
                         variant="top" 
-                        className="p-0" 
-                        style={{ width: '10rem', height: '5rem', overflow: 'hidden' }}>
+                        className="p-0 card-w-img" 
+                        // style={{ width: '10rem', height: '5rem', overflow: 'hidden' }}
+                        >
                         <Card.Img src={entry.imageurl} alt={entry.title} />
                     </Card>
                 </div>
-                <div className='d-flex flex-fill px-5 fs-5'>
+                <div className='entry-text d-flex flex-fill px-5 fs-5'>
                         <span className='font-inter'>{entry.title}</span>
                 </div>
-                <div className="fs-5 px-4 font-inter italic">
-                    {entry.hasread ? 'Read' : null}
+                <div className="px-4 font-inter italic">
+                    {entry.hasread ? window.innerWidth < 400 ? 'X' :'Read' : null}
                 </div>
             </Container>
             {/* <tr

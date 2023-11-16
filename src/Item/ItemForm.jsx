@@ -73,7 +73,9 @@ const ItemForm = ({data}) => {
     }
     
     return (
-        <Form onSubmit={handleSubmit}>
+        <Form 
+            className='ItemForm'
+            onSubmit={handleSubmit}>
             <Row className='mb-3'>
                 <Form.Group as={Col} >
                     <Form.Label>Book Title</Form.Label>
