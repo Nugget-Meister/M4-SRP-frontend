@@ -36,12 +36,12 @@ const NavBar = () => {
                     </Navbar.Brand>
                 </Container>
                 <Container className='justify-content-end'>
-                    <Nav.Link href='/login' className='mx-4'>
+                    {/* <Nav.Link href='/login' className='mx-4'>
                         <Button
                             variant='primary'
                             className='rounded-pill button-login py-3 px-4 shadow-sm'
                         >Log-in</Button>
-                    </Nav.Link>
+                    </Nav.Link> */}
                 </Container>
             </Navbar>
         </div>
