@@ -40,6 +40,10 @@ const ItemForm = ({data}) => {
         })
     }
 
+    const handleReset = () => {
+        setBook({...bookTemplate})
+    }
+
     const handleSubmit = (e) => {
         e.preventDefault()
 
@@ -78,7 +82,7 @@ const ItemForm = ({data}) => {
             onSubmit={handleSubmit}>
             <Row className='mb-3'>
                 <Form.Group as={Col} >
-                    <Form.Label>Book Title</Form.Label>
+                    <Form.Label className='navbar-font'>Book Title</Form.Label>
                     <Form.Control 
                         id="title"
                         value={book.title}
@@ -87,7 +91,7 @@ const ItemForm = ({data}) => {
                         placeholder='Enter Title'/>
                 </Form.Group>
                 <Form.Group as={Col} >
-                    <Form.Label>Book Rating</Form.Label>
+                    <Form.Label className='navbar-font'>Book Rating</Form.Label>
                     <Form.Control
                         id='bookrating'
                         type='number'
@@ -101,7 +105,7 @@ const ItemForm = ({data}) => {
             </Row>
             <Row className='mb-1'>
             <Form.Group as={Col} >
-                    <Form.Label>Book Author</Form.Label>
+                    <Form.Label className='navbar-font'>Book Author</Form.Label>
                     <Form.Control 
                         id="author"
                         value={book.author}
@@ -110,7 +114,7 @@ const ItemForm = ({data}) => {
                         placeholder='Enter Author'/>
             </Form.Group>
             <Form.Group as={Col} >
-                    <Form.Label>ISBN</Form.Label>
+                    <Form.Label className='navbar-font'>ISBN</Form.Label>
                     <Form.Control 
                         id="isbn"
                         value={book.isbn}
@@ -123,7 +127,7 @@ const ItemForm = ({data}) => {
             </Row>
             <Row>
                 <Form.Group as={Col} >
-                    <Form.Label>Genre</Form.Label>
+                    <Form.Label className='navbar-font'>Genre</Form.Label>
                     <Form.Control 
                         id="genre"
                         value={book.genre}
@@ -132,7 +136,7 @@ const ItemForm = ({data}) => {
                         placeholder='Enter Genre'/>
                 </Form.Group>
                 <Form.Group as={Col} >
-                    <Form.Label>Image</Form.Label>
+                    <Form.Label className='navbar-font'>Image</Form.Label>
                     <Form.Control 
                         id="imageurl"
                         value={book.imageurl}
@@ -142,7 +146,7 @@ const ItemForm = ({data}) => {
                 </Form.Group>
             </Row>
                 <Container className='px-4'>
-                    <Form.Label>Read?</Form.Label>
+                    <Form.Label className='navbar-font'>Read?</Form.Label>
                     <Form.Check
                             id='hasread'
                             className='p-4'
@@ -151,13 +155,15 @@ const ItemForm = ({data}) => {
                 </Container>
         
             <Button 
-                className='mx-2'
+                className='mx-2 navbar-font'
                 type="submit">
                     Submit
             </Button>
             <Button 
                 className='mx-2'
-                type="reset">
+                type="reset"
+                onClick={handleReset}
+                >
                     Clear
             </Button>
 

@@ -4,7 +4,11 @@ import ItemForm from './ItemForm';
 const NewItem = () => {
     return (
         <div>
-            <h1>Create New Book</h1>
+            <h1
+            className='font-imfellfc'
+            >
+                Create New Book
+            </h1>
             <ItemForm/>
         </div>
     );
