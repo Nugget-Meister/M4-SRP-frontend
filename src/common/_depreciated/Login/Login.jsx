@@ -3,17 +3,12 @@ import { Container, Button } from 'react-bootstrap';
 import Image from 'react-bootstrap/Image';
 import loginImage from "../assets/loginImage.jpg"
 import { GoogleLogin } from '@react-oauth/google';
-import { GoogleOAuthProvider } from '@react-oauth/google';
-import { onSignIn } from '../common/helpers/googlesignin';
-import { useGoogleLogin } from '@react-oauth/google';
-import { hasGrantedAnyScopeGoogle } from '@react-oauth/google';
 // import { oauthSignIn, onSignIn } from '../common/helpers/googlesignin';
 
 
 const Login = () => {
 
     const client_id = import.meta.env.VITE_GOOGLE_CLIENT_ID
-
 
     return (
         <div>
