@@ -179,5 +179,16 @@ main {
         margin-bottom: 10px;
     }
     
+    .ItemForm {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
 
+    .EditItem {
+        padding-top: 15px;
+    }
+
+    .EditItem h1 {
+        padding-bottom: 10px;
+    }
 }
