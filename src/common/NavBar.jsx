@@ -4,22 +4,28 @@ import Navbar from 'react-bootstrap/Navbar';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import { Image, Button } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 import logoImg from "../assets/logoB.png" 
 import "./styles/NavBar.css"
 
+import { useNavigate } from 'react-router';
+
+
 const NavBar = () => {
+    const navigate = useNavigate()
+    
     return (
         <div className='NavBar'>
             <Navbar 
                 expand="lg" 
                 className='navbar-bg-brown py-2 navbar-mobile'>
                 <Container id="donate-button">
-                    <Nav.Link 
-                        href="/new" 
-                        className='px-4 text-white'>
+                    <Link 
+                        to='/new'
+                        className='nav-link px-4 text-white'>
                         Donate a Book
-                    </Nav.Link>
+                    </Link>
                 </Container>
                 <Container id='navbar-logo' className='justify-content-center'>
                     <Navbar.Brand> 
