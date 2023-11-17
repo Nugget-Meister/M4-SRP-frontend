@@ -1,6 +1,14 @@
+const URL = import.meta.env.VITE_API_LOCAL || import.meta.env.VITE_URL_PROD;
+// const googleAPI = import.meta.env.VITE_GOOGLE_BOOK_API;
 
+// const googleUrl = (searchQuery) => {
+//   const apiUrl = `https://www.googleapis.com/books/v1/volumes?q=${searchQuery}&key=${googleAPI}`;
 
-const URL = import.meta.env.VITE_API_URL || import.meta.env.VITE_LOCAL
+//   return fetch(apiUrl)
+//     .then((res) => res.json())
+//     .then((json) => json.items) 
+//     .catch((err) => console.error(err));
+// };
 
 
 const getAllItems = () => {
@@ -48,4 +56,4 @@ const deleteItem = (id) => {
     .catch((err) => console.error(err));
 };
 
-export { getAllItems, getItem, updateItem, addItem, deleteItem };
+export { getAllItems, getItem, updateItem, addItem, deleteItem,};
