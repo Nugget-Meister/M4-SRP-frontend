@@ -1,4 +1,4 @@
-const URL = import.meta.env.VITE_API_LOCAL || import.meta.env.VITE_URL_PROD;
+const URL = import.meta.env.VITE_API_URL || import.meta.env.VITE_LOCAL
 // const googleAPI = import.meta.env.VITE_GOOGLE_BOOK_API;
 
 // const googleUrl = (searchQuery) => {
